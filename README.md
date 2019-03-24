@@ -46,7 +46,7 @@ root > touch .babelrc > `{ "presets": ["@babel/preset-env", "@babel/preset-react
 
 root > touch webpack.config.js > `module.exports = { module: { rules: [ { test: /\.js$/, exclude: /node_modules/, use: { loader: "babel-loader" } } ] } };`
 
-root > package.json > `"scripts": { "dev": "webpack --mode development ./'project name'/frontend/src/index.js -- output ./'project name'/frontend/static/frontend/main.js", "build": "webpack --mode production ./'project name'/frontend/src/index.js -- output ./'project name'/frontend/static/frontend/main.js" }`
+root > package.json > `"scripts": { "dev": "webpack --mode development --watch ./'project name'/frontend/src/index.js -- output ./'project name'/frontend/static/frontend/main.js", "build": "webpack --mode production ./'project name'/frontend/src/index.js -- output ./'project name'/frontend/static/frontend/main.js" }`
 
 frontend > src > touch index.js > `import App from "./components/App"`
 
